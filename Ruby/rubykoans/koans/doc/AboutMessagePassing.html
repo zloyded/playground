@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class AboutMessagePassing - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link"><a href="Neo/Koan.html">Neo::Koan</a>
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-i-test_all_messages_are_caught">#test_all_messages_are_caught</a>
+    
+    <li ><a href="#method-i-test_calling_method_missing_causes_the_no_method_error">#test_calling_method_missing_causes_the_no_method_error</a>
+    
+    <li ><a href="#method-i-test_catching_messages_makes_respond_to_lie">#test_catching_messages_makes_respond_to_lie</a>
+    
+    <li ><a href="#method-i-test_classes_can_be_asked_if_they_know_how_to_respond">#test_classes_can_be_asked_if_they_know_how_to_respond</a>
+    
+    <li ><a href="#method-i-test_explicitly_implementing_respond_to_lets_objects_tell_the_truth">#test_explicitly_implementing_respond_to_lets_objects_tell_the_truth</a>
+    
+    <li ><a href="#method-i-test_foo_method_are_caught">#test_foo_method_are_caught</a>
+    
+    <li ><a href="#method-i-test_methods_can_be_called_directly">#test_methods_can_be_called_directly</a>
+    
+    <li ><a href="#method-i-test_methods_can_be_invoked_by_sending_the_message">#test_methods_can_be_invoked_by_sending_the_message</a>
+    
+    <li ><a href="#method-i-test_methods_can_be_invoked_more_dynamically">#test_methods_can_be_invoked_more_dynamically</a>
+    
+    <li ><a href="#method-i-test_non_foo_messages_are_treated_normally">#test_non_foo_messages_are_treated_normally</a>
+    
+    <li ><a href="#method-i-test_send_with_underscores_will_also_send_messages">#test_send_with_underscores_will_also_send_messages</a>
+    
+    <li ><a href="#method-i-test_sending_a_message_with_arguments">#test_sending_a_message_with_arguments</a>
+    
+    <li ><a href="#method-i-test_sending_undefined_messages_to_a_typical_object_results_in_errors">#test_sending_undefined_messages_to_a_typical_object_results_in_errors</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-AboutMessagePassing">
+  <h1 id="class-AboutMessagePassing" class="class">
+    class AboutMessagePassing
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-test_all_messages_are_caught" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_all_messages_are_caught</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_all_messages_are_caught-source">
+            <pre><span class="ruby-comment"># File about_message_passing.rb, line 121</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_all_messages_are_caught</span>
+  <span class="ruby-identifier">catcher</span> = <span class="ruby-constant">AllMessageCatcher</span>.<span class="ruby-identifier">new</span>
+
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">__</span>, <span class="ruby-identifier">catcher</span>.<span class="ruby-identifier">foobar</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">__</span>, <span class="ruby-identifier">catcher</span>.<span class="ruby-identifier">foobaz</span>(<span class="ruby-value">1</span>)
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">__</span>, <span class="ruby-identifier">catcher</span>.<span class="ruby-identifier">sum</span>(<span class="ruby-value">1</span>,<span class="ruby-value">2</span>,<span class="ruby-value">3</span>,<span class="ruby-value">4</span>,<span class="ruby-value">5</span>,<span class="ruby-value">6</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_calling_method_missing_causes_the_no_method_error" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_calling_method_missing_causes_the_no_method_error</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_calling_method_missing_causes_the_no_method_error-source">
+            <pre><span class="ruby-comment"># File about_message_passing.rb, line 87</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_calling_method_missing_causes_the_no_method_error</span>
+  <span class="ruby-identifier">typical</span> = <span class="ruby-constant">TypicalObject</span>.<span class="ruby-identifier">new</span>
+
+  <span class="ruby-identifier">exception</span> = <span class="ruby-identifier">assert_raise</span>(<span class="ruby-identifier">___</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">typical</span>.<span class="ruby-identifier">method_missing</span>(<span class="ruby-value">:foobar</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">assert_match</span>(<span class="ruby-regexp">/foobar/</span>, <span class="ruby-identifier">exception</span>.<span class="ruby-identifier">message</span>)
+
+  <span class="ruby-comment"># THINK ABOUT IT:</span>
+  <span class="ruby-comment">#</span>
+  <span class="ruby-comment"># If the method :method_missing causes the NoMethodError, then</span>
+  <span class="ruby-comment"># what would happen if we redefine method_missing?</span>
+  <span class="ruby-comment">#</span>
+  <span class="ruby-comment"># NOTE:</span>
+  <span class="ruby-comment">#</span>
+  <span class="ruby-comment"># In Ruby 1.8 the method_missing method is public and can be</span>
+  <span class="ruby-comment"># called as shown above. However, in Ruby 1.9 (and later versions)</span>
+  <span class="ruby-comment"># the method_missing method is private. We explicitly made it</span>
+  <span class="ruby-comment"># public in the testing framework so this example works in both</span>
+  <span class="ruby-comment"># versions of Ruby. Just keep in mind you can&#39;t call</span>
+  <span class="ruby-comment"># method_missing like that after Ruby 1.9 normally.</span>
+  <span class="ruby-comment">#</span>
+  <span class="ruby-comment"># Thanks.  We now return you to your regularly scheduled Ruby</span>
+  <span class="ruby-comment"># Koans.</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_catching_messages_makes_respond_to_lie" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_catching_messages_makes_respond_to_lie</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_catching_messages_makes_respond_to_lie-source">
+            <pre><span class="ruby-comment"># File about_message_passing.rb, line 129</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_catching_messages_makes_respond_to_lie</span>
+  <span class="ruby-identifier">catcher</span> = <span class="ruby-constant">AllMessageCatcher</span>.<span class="ruby-identifier">new</span>
+
+  <span class="ruby-identifier">assert_nothing_raised</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">catcher</span>.<span class="ruby-identifier">any_method</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">__</span>, <span class="ruby-identifier">catcher</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:any_method</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_classes_can_be_asked_if_they_know_how_to_respond" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_classes_can_be_asked_if_they_know_how_to_respond</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_classes_can_be_asked_if_they_know_how_to_respond-source">
+            <pre><span class="ruby-comment"># File about_message_passing.rb, line 41</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_classes_can_be_asked_if_they_know_how_to_respond</span>
+  <span class="ruby-identifier">mc</span> = <span class="ruby-constant">MessageCatcher</span>.<span class="ruby-identifier">new</span>
+
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">__</span>, <span class="ruby-identifier">mc</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:caught?</span>)
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">__</span>, <span class="ruby-identifier">mc</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:does_not_exist</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_explicitly_implementing_respond_to_lets_objects_tell_the_truth" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_explicitly_implementing_respond_to_lets_objects_tell_the_truth</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_explicitly_implementing_respond_to_lets_objects_tell_the_truth-source">
+            <pre><span class="ruby-comment"># File about_message_passing.rb, line 178</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_explicitly_implementing_respond_to_lets_objects_tell_the_truth</span>
+  <span class="ruby-identifier">catcher</span> = <span class="ruby-constant">WellBehavedFooCatcher</span>.<span class="ruby-identifier">new</span>
+
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">__</span>, <span class="ruby-identifier">catcher</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:foo_bar</span>)
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">__</span>, <span class="ruby-identifier">catcher</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:something_else</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_foo_method_are_caught" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_foo_method_are_caught</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_foo_method_are_caught-source">
+            <pre><span class="ruby-comment"># File about_message_passing.rb, line 150</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_foo_method_are_caught</span>
+  <span class="ruby-identifier">catcher</span> = <span class="ruby-constant">WellBehavedFooCatcher</span>.<span class="ruby-identifier">new</span>
+
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">__</span>, <span class="ruby-identifier">catcher</span>.<span class="ruby-identifier">foo_bar</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">__</span>, <span class="ruby-identifier">catcher</span>.<span class="ruby-identifier">foo_baz</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_methods_can_be_called_directly" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_methods_can_be_called_directly</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_methods_can_be_called_directly-source">
+            <pre><span class="ruby-comment"># File about_message_passing.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_methods_can_be_called_directly</span>
+  <span class="ruby-identifier">mc</span> = <span class="ruby-constant">MessageCatcher</span>.<span class="ruby-identifier">new</span>
+
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">mc</span>.<span class="ruby-identifier">caught?</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_methods_can_be_invoked_by_sending_the_message" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_methods_can_be_invoked_by_sending_the_message</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_methods_can_be_invoked_by_sending_the_message-source">
+            <pre><span class="ruby-comment"># File about_message_passing.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_methods_can_be_invoked_by_sending_the_message</span>
+  <span class="ruby-identifier">mc</span> = <span class="ruby-constant">MessageCatcher</span>.<span class="ruby-identifier">new</span>
+
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">mc</span>.<span class="ruby-identifier">send</span>(<span class="ruby-value">:caught?</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_methods_can_be_invoked_more_dynamically" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_methods_can_be_invoked_more_dynamically</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_methods_can_be_invoked_more_dynamically-source">
+            <pre><span class="ruby-comment"># File about_message_passing.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_methods_can_be_invoked_more_dynamically</span>
+  <span class="ruby-identifier">mc</span> = <span class="ruby-constant">MessageCatcher</span>.<span class="ruby-identifier">new</span>
+
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">mc</span>.<span class="ruby-identifier">send</span>(<span class="ruby-string">&quot;caught?&quot;</span>)
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">mc</span>.<span class="ruby-identifier">send</span>(<span class="ruby-string">&quot;caught&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">__</span> )    <span class="ruby-comment"># What do you need to add to the first string?</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-identifier">mc</span>.<span class="ruby-identifier">send</span>(<span class="ruby-string">&quot;CAUGHT?&quot;</span>.<span class="ruby-identifier">____</span> )      <span class="ruby-comment"># What would you need to do to the string?</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_non_foo_messages_are_treated_normally" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_non_foo_messages_are_treated_normally</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_non_foo_messages_are_treated_normally-source">
+            <pre><span class="ruby-comment"># File about_message_passing.rb, line 157</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_non_foo_messages_are_treated_normally</span>
+  <span class="ruby-identifier">catcher</span> = <span class="ruby-constant">WellBehavedFooCatcher</span>.<span class="ruby-identifier">new</span>
+
+  <span class="ruby-identifier">assert_raise</span>(<span class="ruby-identifier">___</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">catcher</span>.<span class="ruby-identifier">normal_undefined_method</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_send_with_underscores_will_also_send_messages" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_send_with_underscores_will_also_send_messages</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_send_with_underscores_will_also_send_messages-source">
+            <pre><span class="ruby-comment"># File about_message_passing.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_send_with_underscores_will_also_send_messages</span>
+  <span class="ruby-identifier">mc</span> = <span class="ruby-constant">MessageCatcher</span>.<span class="ruby-identifier">new</span>
+
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">__</span>, <span class="ruby-identifier">mc</span>.<span class="ruby-identifier">__send__</span>(<span class="ruby-value">:caught?</span>)
+
+  <span class="ruby-comment"># THINK ABOUT IT:</span>
+  <span class="ruby-comment">#</span>
+  <span class="ruby-comment"># Why does Ruby provide both send and __send__ ?</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_sending_a_message_with_arguments" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_sending_a_message_with_arguments</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_sending_a_message_with_arguments-source">
+            <pre><span class="ruby-comment"># File about_message_passing.rb, line 56</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_sending_a_message_with_arguments</span>
+  <span class="ruby-identifier">mc</span> = <span class="ruby-constant">MessageCatcher</span>.<span class="ruby-identifier">new</span>
+
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">__</span>, <span class="ruby-identifier">mc</span>.<span class="ruby-identifier">add_a_payload</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">__</span>, <span class="ruby-identifier">mc</span>.<span class="ruby-identifier">send</span>(<span class="ruby-value">:add_a_payload</span>)
+
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">__</span>, <span class="ruby-identifier">mc</span>.<span class="ruby-identifier">add_a_payload</span>(<span class="ruby-value">3</span>, <span class="ruby-value">4</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">6</span>)
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">__</span>, <span class="ruby-identifier">mc</span>.<span class="ruby-identifier">send</span>(<span class="ruby-value">:add_a_payload</span>, <span class="ruby-value">3</span>, <span class="ruby-value">4</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-value">6</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_sending_undefined_messages_to_a_typical_object_results_in_errors" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_sending_undefined_messages_to_a_typical_object_results_in_errors</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_sending_undefined_messages_to_a_typical_object_results_in_errors-source">
+            <pre><span class="ruby-comment"># File about_message_passing.rb, line 78</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_sending_undefined_messages_to_a_typical_object_results_in_errors</span>
+  <span class="ruby-identifier">typical</span> = <span class="ruby-constant">TypicalObject</span>.<span class="ruby-identifier">new</span>
+
+  <span class="ruby-identifier">exception</span> = <span class="ruby-identifier">assert_raise</span>(<span class="ruby-identifier">___</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">typical</span>.<span class="ruby-identifier">foobar</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">assert_match</span>(<span class="ruby-regexp">/foobar/</span>, <span class="ruby-identifier">exception</span>.<span class="ruby-identifier">message</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

@@ -1,0 +1,13 @@
+.DS_Store
+Python/3.5/*/app/__pycache__
+Python/3.5/*/app/models/__pycache__
+Python/3.5/*/config/__pycache__
+Python/3.5/*/app/controllers/__pycache__
+Python/3.5/*/__pycache__/
+Python/3.5/MailPhoto/static/images/downloaded/*
+Python/3.5/MailPhoto/app/controllers/__init__.pyc
+Python/3.5/MailPhoto/app/routers.pyc
+Python/3.5/MailPhoto/menv/
+Python/3.5/MailPhoto/**/*.pyc
+Python/3.5/MailPhoto/config/secrets.yml
+Python/3.5/MailPhoto/docs/build

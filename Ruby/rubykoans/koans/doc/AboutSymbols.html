@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class AboutSymbols - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link"><a href="Neo/Koan.html">Neo::Koan</a>
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-i-test_constants_become_symbols">#test_constants_become_symbols</a>
+    
+    <li ><a href="#method-i-test_identical_symbols_are_a_single_internal_object">#test_identical_symbols_are_a_single_internal_object</a>
+    
+    <li ><a href="#method-i-test_method_names_become_symbols">#test_method_names_become_symbols</a>
+    
+    <li ><a href="#method-i-test_symbols_are_not_strings">#test_symbols_are_not_strings</a>
+    
+    <li ><a href="#method-i-test_symbols_are_symbols">#test_symbols_are_symbols</a>
+    
+    <li ><a href="#method-i-test_symbols_can_be_compared">#test_symbols_can_be_compared</a>
+    
+    <li ><a href="#method-i-test_symbols_can_be_dynamically_created">#test_symbols_can_be_dynamically_created</a>
+    
+    <li ><a href="#method-i-test_symbols_can_be_made_from_strings">#test_symbols_can_be_made_from_strings</a>
+    
+    <li ><a href="#method-i-test_symbols_cannot_be_concatenated">#test_symbols_cannot_be_concatenated</a>
+    
+    <li ><a href="#method-i-test_symbols_do_not_have_string_methods">#test_symbols_do_not_have_string_methods</a>
+    
+    <li ><a href="#method-i-test_symbols_with_interpolation_can_be_built">#test_symbols_with_interpolation_can_be_built</a>
+    
+    <li ><a href="#method-i-test_symbols_with_spaces_can_be_built">#test_symbols_with_spaces_can_be_built</a>
+    
+    <li ><a href="#method-i-test_to_s_is_called_on_interpolated_symbols">#test_to_s_is_called_on_interpolated_symbols</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-AboutSymbols">
+  <h1 id="class-AboutSymbols" class="class">
+    class AboutSymbols
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+    <section class="constants-list">
+      <header>
+        <h3>Constants</h3>
+      </header>
+      <dl>
+      
+        <dt id="RubyConstant">RubyConstant
+        
+        <dd>
+        
+      
+      </dl>
+    </section>
+    
+
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-test_constants_become_symbols" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_constants_become_symbols</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_constants_become_symbols-source">
+            <pre><span class="ruby-comment"># File about_symbols.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_constants_become_symbols</span>
+  <span class="ruby-identifier">all_symbols_as_strings</span> = <span class="ruby-constant">Symbol</span>.<span class="ruby-identifier">all_symbols</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">to_s</span> }
+
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">__</span>, <span class="ruby-identifier">all_symbols_as_strings</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">__</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_identical_symbols_are_a_single_internal_object" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_identical_symbols_are_a_single_internal_object</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_identical_symbols_are_a_single_internal_object-source">
+            <pre><span class="ruby-comment"># File about_symbols.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_identical_symbols_are_a_single_internal_object</span>
+  <span class="ruby-identifier">symbol1</span> = <span class="ruby-value">:a_symbol</span>
+  <span class="ruby-identifier">symbol2</span> = <span class="ruby-value">:a_symbol</span>
+
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">__</span>, <span class="ruby-identifier">symbol1</span>           <span class="ruby-operator">==</span> <span class="ruby-identifier">symbol2</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">__</span>, <span class="ruby-identifier">symbol1</span>.<span class="ruby-identifier">object_id</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">symbol2</span>.<span class="ruby-identifier">object_id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_method_names_become_symbols" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_method_names_become_symbols</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_method_names_become_symbols-source">
+            <pre><span class="ruby-comment"># File about_symbols.rb, line 26</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_method_names_become_symbols</span>
+  <span class="ruby-identifier">symbols_as_strings</span> = <span class="ruby-constant">Symbol</span>.<span class="ruby-identifier">all_symbols</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">to_s</span> }
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">__</span>, <span class="ruby-identifier">symbols_as_strings</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-string">&quot;test_method_names_become_symbols&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_symbols_are_not_strings" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_symbols_are_not_strings</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_symbols_are_not_strings-source">
+            <pre><span class="ruby-comment"># File about_symbols.rb, line 70</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_symbols_are_not_strings</span>
+  <span class="ruby-identifier">symbol</span> = <span class="ruby-value">:ruby</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">__</span>, <span class="ruby-identifier">symbol</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>)
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">__</span>, <span class="ruby-identifier">symbol</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-string">&quot;ruby&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_symbols_are_symbols" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_symbols_are_symbols</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_symbols_are_symbols-source">
+            <pre><span class="ruby-comment"># File about_symbols.rb, line 4</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_symbols_are_symbols</span>
+  <span class="ruby-identifier">symbol</span> = <span class="ruby-value">:ruby</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">__</span>, <span class="ruby-identifier">symbol</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Symbol</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_symbols_can_be_compared" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_symbols_can_be_compared</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_symbols_can_be_compared-source">
+            <pre><span class="ruby-comment"># File about_symbols.rb, line 9</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_symbols_can_be_compared</span>
+  <span class="ruby-identifier">symbol1</span> = <span class="ruby-value">:a_symbol</span>
+  <span class="ruby-identifier">symbol2</span> = <span class="ruby-value">:a_symbol</span>
+  <span class="ruby-identifier">symbol3</span> = <span class="ruby-value">:something_else</span>
+
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">__</span>, <span class="ruby-identifier">symbol1</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">symbol2</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">__</span>, <span class="ruby-identifier">symbol1</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">symbol3</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_symbols_can_be_dynamically_created" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_symbols_can_be_dynamically_created</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_symbols_can_be_dynamically_created-source">
+            <pre><span class="ruby-comment"># File about_symbols.rb, line 93</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_symbols_can_be_dynamically_created</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">__</span>, (<span class="ruby-string">&quot;cats&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;dogs&quot;</span>).<span class="ruby-identifier">to_sym</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_symbols_can_be_made_from_strings" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_symbols_can_be_made_from_strings</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_symbols_can_be_made_from_strings-source">
+            <pre><span class="ruby-comment"># File about_symbols.rb, line 45</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_symbols_can_be_made_from_strings</span>
+  <span class="ruby-identifier">string</span> = <span class="ruby-string">&quot;catsAndDogs&quot;</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">__</span>, <span class="ruby-identifier">string</span>.<span class="ruby-identifier">to_sym</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_symbols_cannot_be_concatenated" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_symbols_cannot_be_concatenated</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>It&#39;s important to realize that symbols are not “immutable strings”,
+though they are immutable. None of the interesting string operations are
+available on symbols.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="test_symbols_cannot_be_concatenated-source">
+            <pre><span class="ruby-comment"># File about_symbols.rb, line 86</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_symbols_cannot_be_concatenated</span>
+  <span class="ruby-comment"># Exceptions will be pondered further down the path</span>
+  <span class="ruby-identifier">assert_raise</span>(<span class="ruby-identifier">___</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-value">:cats</span> <span class="ruby-operator">+</span> <span class="ruby-value">:dogs</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_symbols_do_not_have_string_methods" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_symbols_do_not_have_string_methods</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_symbols_do_not_have_string_methods-source">
+            <pre><span class="ruby-comment"># File about_symbols.rb, line 76</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_symbols_do_not_have_string_methods</span>
+  <span class="ruby-identifier">symbol</span> = <span class="ruby-value">:not_a_string</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">__</span>, <span class="ruby-identifier">symbol</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:each_char</span>)
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">__</span>, <span class="ruby-identifier">symbol</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:reverse</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_symbols_with_interpolation_can_be_built" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_symbols_with_interpolation_can_be_built</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_symbols_with_interpolation_can_be_built-source">
+            <pre><span class="ruby-comment"># File about_symbols.rb, line 56</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_symbols_with_interpolation_can_be_built</span>
+  <span class="ruby-identifier">value</span> = <span class="ruby-string">&quot;and&quot;</span>
+  <span class="ruby-identifier">symbol</span> = <span class="ruby-value">:&quot;cats #{value} dogs&quot;</span>
+
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">__</span>.<span class="ruby-identifier">to_sym</span>, <span class="ruby-identifier">symbol</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_symbols_with_spaces_can_be_built" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_symbols_with_spaces_can_be_built</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_symbols_with_spaces_can_be_built-source">
+            <pre><span class="ruby-comment"># File about_symbols.rb, line 50</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_symbols_with_spaces_can_be_built</span>
+  <span class="ruby-identifier">symbol</span> = <span class="ruby-value">:&quot;cats and dogs&quot;</span>
+
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">__</span>.<span class="ruby-identifier">to_sym</span>, <span class="ruby-identifier">symbol</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_to_s_is_called_on_interpolated_symbols" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_to_s_is_called_on_interpolated_symbols</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_to_s_is_called_on_interpolated_symbols-source">
+            <pre><span class="ruby-comment"># File about_symbols.rb, line 63</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_to_s_is_called_on_interpolated_symbols</span>
+  <span class="ruby-identifier">symbol</span> = <span class="ruby-value">:cats</span>
+  <span class="ruby-identifier">string</span> = <span class="ruby-node">&quot;It is raining #{symbol} and dogs.&quot;</span>
+
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">__</span>, <span class="ruby-identifier">string</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

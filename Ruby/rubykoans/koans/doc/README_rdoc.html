@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>README - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+<div class="nav-section">
+  <h3>Table of Contents</h3>
+
+  <ul class="link-list" role="directory">
+    <li><a href="#label-Neo+Ruby+Koans">Neo Ruby Koans</a>
+    <li><a href="#label-The+Structure">The Structure</a>
+    <li><a href="#label-Installing+Ruby">Installing Ruby</a>
+    <li><a href="#label-Generating+the+Koans">Generating the Koans</a>
+    <li><a href="#label-The+Path+To+Enlightenment">The Path To Enlightenment</a>
+    <li><a href="#label-Red-2C+Green-2C+Refactor">Red, Green, Refactor</a>
+    <li><a href="#label-Running+the+Koans+automatically">Running the Koans automatically</a>
+    <li><a href="#label-Inspiration">Inspiration</a>
+    <li><a href="#label-Other+Resources">Other Resources</a>
+    <li><a href="#label-Other+stuff">Other stuff</a>
+    <li><a href="#label-License">License</a>
+  </ul>
+</div>
+
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./GREED_RULES_txt.html">GREED_RULES</a>
+  
+    <li><a href="./README_rdoc.html">README</a>
+  
+    <li><a href="./example_file_txt.html">example_file</a>
+  
+    <li><a href="./koans_watchr.html">koans.watchr</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page README.rdoc">
+
+<h1 id="label-Neo+Ruby+Koans"><a href="Neo.html">Neo</a> Ruby Koans<span><a href="#label-Neo+Ruby+Koans">&para;</a> <a href="#top">&uarr;</a></span></h1>
+
+<p>The Ruby Koans walk you along the path to enlightenment in order to learn
+Ruby. The goal is to learn the Ruby language, syntax, structure, and some
+common functions and libraries. We also teach you culture by basing the
+koans on tests. Testing is not just something we pay lip service to, but
+something we live.  Testing is essential in your quest to learn and do
+great things in Ruby.</p>
+
+<h2 id="label-The+Structure">The Structure<span><a href="#label-The+Structure">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>The koans are broken out into areas by file, hashes are covered in
+<code>about_hashes.rb</code>, modules are introduced in
+<code>about_modules.rb</code>, <em>etc</em>.  They are presented in order
+in the <code>path_to_enlightenment.rb</code> file.</p>
+
+<p>Each koan builds up your knowledge of Ruby and builds upon itself. It will
+stop at the first place you need to correct.</p>
+
+<p>Some koans simply need to have the correct answer substituted for an
+incorrect one. Some, however, require you to supply your own answer.  If
+you see the method <code>__</code> (a double underscore) listed, it is a
+hint to you to supply your own code in order to make it work correctly.</p>
+
+<h2 id="label-Installing+Ruby">Installing Ruby<span><a href="#label-Installing+Ruby">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>If you do not have Ruby setup, please visit <a
+href="http://ruby-lang.org/en/downloads">ruby-lang.org/en/downloads</a>/
+for operating specific instructions.  In order to run the koans you need
+<code>ruby</code> and <code>rake</code> installed. To check your
+installations simply type:</p>
+
+<p>*nix platforms from any terminal window:</p>
+
+<pre>[~] $ ruby --version
+[~] $ rake --version</pre>
+
+<p>Windows from the command prompt (<code>cmd.exe</code>)</p>
+
+<pre>c:\ruby --version
+c:\rake --version</pre>
+
+<p>If you don&#39;t have <code>rake</code> installed, just run <code>gem
+install rake</code></p>
+
+<p>Any response for Ruby with a version number greater than 1.8 is fine
+(should be around 1.8.6 or more). Any version of <code>rake</code> will do.</p>
+
+<h2 id="label-Generating+the+Koans">Generating the Koans<span><a href="#label-Generating+the+Koans">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>A fresh checkout will not include the koans, you will need to generate
+them.</p>
+
+<pre>[ruby_koans] $ rake gen                       # generates the koans directory</pre>
+
+<p>If you need to regenerate the koans, thus wiping your current `koans`,</p>
+
+<pre>[ruby_koans] $ rake regen                     # regenerates the koans directory, wiping the original</pre>
+
+<h2 id="label-The+Path+To+Enlightenment">The Path To Enlightenment<span><a href="#label-The+Path+To+Enlightenment">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>You can run the tests through <code>rake</code> or by calling the file
+itself (<code>rake</code> is the recommended way to run them as we might
+build more functionality into this task).</p>
+
+<p>*nix platforms, from the <code>ruby_koans</code> directory</p>
+
+<pre>[ruby_koans] $ rake                           # runs the default target :walk_the_path
+[ruby_koans] $ ruby path_to_enlightenment.rb  # simply call the file directly</pre>
+
+<p>Windows is the same thing</p>
+
+<pre>c:\ruby_koans\rake                             # runs the default target :walk_the_path
+c:\ruby_koans\ruby path_to_enlightenment.rb    # simply call the file directly</pre>
+
+<h3 id="label-Red-2C+Green-2C+Refactor">Red, Green, Refactor<span><a href="#label-Red-2C+Green-2C+Refactor">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>In test-driven development the mantra has always been <em>red, green,
+refactor</em>. Write a failing test and run it (<em>red</em>), make the
+test pass (<em>green</em>), then look at the code and consider if you can
+make it any better (<em>refactor</em>).</p>
+
+<p>While walking the path to Ruby enlightenment you will need to run the koan
+and see it fail (<em>red</em>), make the test pass (<em>green</em>), then
+take a moment and reflect upon the test to see what it is teaching you and
+improve the code to better communicate its intent (<em>refactor</em>).</p>
+
+<p>The very first time you run the koans you will see the following output:</p>
+
+<pre>[ ruby_koans ] $ rake
+(in /Users/person/dev/ruby_koans)
+/usr/bin/ruby1.8 path_to_enlightenment.rb
+
+AboutAsserts#test_assert_truth has damaged your karma.
+
+The Master says:
+You have not yet reached enlightenment.
+
+The answers you seek...
+&lt;false&gt; is not true.
+
+Please meditate on the following code:
+./about_asserts.rb:10:in `test_assert_truth&#39;
+path_to_enlightenment.rb:38:in `each_with_index&#39;
+path_to_enlightenment.rb:38
+
+mountains are merely mountains
+your path thus far [X_________________________________________________] 0/280</pre>
+
+<p>You have come to your first stage. Notice it is telling you where to look
+for the first solution:</p>
+
+<pre>Please meditate on the following code:
+./about_asserts.rb:10:in `test_assert_truth&#39;
+path_to_enlightenment.rb:38:in `each_with_index&#39;
+path_to_enlightenment.rb:38</pre>
+
+<p>Open the <code>about_asserts.rb</code> file and look at the first test:</p>
+
+<pre class="ruby"><span class="ruby-comment"># We shall contemplate truth by testing reality, via asserts.</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_assert_truth</span>
+  <span class="ruby-identifier">assert</span> <span class="ruby-keyword">false</span>                <span class="ruby-comment"># This should be true</span>
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p>Change the <code>false</code> to <code>true</code> and re-run the test. 
+After you are done, think about what you are learning.  In this case,
+ignore everything except the method name (<code>test_assert_truth</code>)
+and the parts inside the method (everything before the <code>end</code>).</p>
+
+<p>In this case the goal is for you to see that if you pass a value to the
+<code>assert</code> method, it will either ensure it is <code>true</code>
+and continue on, or fail if the statement is <code>false</code>.</p>
+
+<h3 id="label-Running+the+Koans+automatically">Running the Koans automatically<span><a href="#label-Running+the+Koans+automatically">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p><em>This section is optional.</em></p>
+
+<p>Normally the path to enlightenment looks like this:</p>
+
+<pre class="ruby"><span class="ruby-identifier">cd</span> <span class="ruby-identifier">ruby_koans</span>
+<span class="ruby-identifier">rake</span>
+<span class="ruby-comment"># edit</span>
+<span class="ruby-identifier">rake</span>
+<span class="ruby-comment"># edit</span>
+<span class="ruby-identifier">rake</span>
+<span class="ruby-comment"># etc</span>
+</pre>
+
+<p>If you prefer, you can keep the koans running in the background so that
+after you make a change in your editor, the koans will immediately run
+again. This will hopefully keep your focus on learning Ruby instead of on
+the command line.</p>
+
+<p>Install the Ruby gem (library) called <code>watchr</code> and then ask it
+to “watch” the koans for changes:</p>
+
+<pre class="ruby"><span class="ruby-identifier">cd</span> <span class="ruby-identifier">ruby_koans</span>
+<span class="ruby-identifier">rake</span>
+<span class="ruby-comment"># decide to run rake automatically from now on as you edit</span>
+<span class="ruby-identifier">gem</span> <span class="ruby-identifier">install</span> <span class="ruby-identifier">watchr</span>
+<span class="ruby-identifier">watchr</span> .<span class="ruby-operator">/</span><span class="ruby-identifier">koans</span><span class="ruby-operator">/</span><span class="ruby-identifier">koans</span>.<span class="ruby-identifier">watchr</span>
+</pre>
+
+<h2 id="label-Inspiration">Inspiration<span><a href="#label-Inspiration">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>A special thanks to Mike Clark and Ara Howard for inspiring this project. 
+Mike Clark wrote an excellent blog post about learning Ruby through unit
+testing. This sparked an idea that has taken a bit to solidify, that of
+bringing new rubyists into the community through testing. Ara Howard then
+gave us the idea for the Koans in his ruby quiz entry on Meta Koans (a must
+for any rubyist wanting to improve their skills).  Also, “The Little
+Lisper” taught us all the value of the short questions/simple answers style
+of learning.</p>
+<dl class="rdoc-list note-list"><dt>Mike Clark&#39;s post 
+<dd>
+<p><a
+href="http://www.clarkware.com/cgi/blosxom/2005/03/18">www.clarkware.com/cgi/blosxom/2005/03/18</a></p>
+</dd><dt>Meta Koans        
+<dd>
+<p><a href="http://rubyquiz.com/quiz67.html">rubyquiz.com/quiz67.html</a></p>
+</dd><dt>The Little Lisper 
+<dd>
+<p><a
+href="http://www.amazon.com/Little-LISPer-Third-Daniel-Friedman/dp/0023397632">www.amazon.com/Little-LISPer-Third-Daniel-Friedman/dp/0023397632</a></p>
+</dd></dl>
+
+<h2 id="label-Other+Resources">Other Resources<span><a href="#label-Other+Resources">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<dl class="rdoc-list note-list"><dt>The Ruby Language               
+<dd>
+<p><a href="http://ruby-lang.org">ruby-lang.org</a></p>
+</dd><dt>Try Ruby in your browser        
+<dd>
+<p><a href="http://tryruby.org">tryruby.org</a></p>
+</dd><dt>Dave Thomas&#39; introduction to Ruby Programming Ruby (the Pick Axe) 
+<dd>
+<p><a
+href="http://pragprog.com/titles/ruby/programming-ruby">pragprog.com/titles/ruby/programming-ruby</a></p>
+</dd><dt>Brian Marick&#39;s fantastic guide for beginners Everyday Scripting with Ruby    
+<dd>
+<p><a
+href="http://pragprog.com/titles/bmsft/everyday-scripting-with-ruby">pragprog.com/titles/bmsft/everyday-scripting-with-ruby</a></p>
+</dd></dl>
+
+<h1 id="label-Other+stuff">Other stuff<span><a href="#label-Other+stuff">&para;</a> <a href="#top">&uarr;</a></span></h1>
+<dl class="rdoc-list note-list"><dt>Author         
+<dd>
+<p>Jim Weirich &lt;jim@neo.org&gt;</p>
+</dd><dt>Author         
+<dd>
+<p>Joe O&#39;Brien &lt;joe@objo.com&gt;</p>
+</dd><dt>Issue Tracker  
+<dd>
+<p><a
+href="http://www.pivotaltracker.com/projects/48111">www.pivotaltracker.com/projects/48111</a></p>
+</dd><dt>Requires       
+<dd>
+<p>Ruby 1.8.x or later and Rake (any recent version)</p>
+</dd></dl>
+
+<h1 id="label-License">License<span><a href="#label-License">&para;</a> <a href="#top">&uarr;</a></span></h1>
+
+<p><img src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></p>
+
+<p>RubyKoans is released under a Creative Commons,
+Attribution-NonCommercial-ShareAlike, Version 3.0 (<a
+href="http://creativecommons.org/licenses/by-nc-sa/3.0">creativecommons.org/licenses/by-nc-sa/3.0</a>/)
+License.</p>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

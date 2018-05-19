@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class AboutSandwichCode - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link"><a href="Neo/Koan.html">Neo::Koan</a>
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-i-count_lines">#count_lines</a>
+    
+    <li ><a href="#method-i-count_lines2">#count_lines2</a>
+    
+    <li ><a href="#method-i-count_lines3">#count_lines3</a>
+    
+    <li ><a href="#method-i-file_sandwich">#file_sandwich</a>
+    
+    <li ><a href="#method-i-find_line">#find_line</a>
+    
+    <li ><a href="#method-i-find_line2">#find_line2</a>
+    
+    <li ><a href="#method-i-test_counting_lines">#test_counting_lines</a>
+    
+    <li ><a href="#method-i-test_counting_lines2">#test_counting_lines2</a>
+    
+    <li ><a href="#method-i-test_finding_lines">#test_finding_lines</a>
+    
+    <li ><a href="#method-i-test_finding_lines2">#test_finding_lines2</a>
+    
+    <li ><a href="#method-i-test_open_handles_the_file_sandwich_when_given_a_block">#test_open_handles_the_file_sandwich_when_given_a_block</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-AboutSandwichCode">
+  <h1 id="class-AboutSandwichCode" class="class">
+    class AboutSandwichCode
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-count_lines" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">count_lines</span><span
+            class="method-args">(file_name)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="count_lines-source">
+            <pre><span class="ruby-comment"># File about_sandwich_code.rb, line 5</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">count_lines</span>(<span class="ruby-identifier">file_name</span>)
+  <span class="ruby-identifier">file</span> = <span class="ruby-identifier">open</span>(<span class="ruby-identifier">file_name</span>)
+  <span class="ruby-identifier">count</span> = <span class="ruby-value">0</span>
+  <span class="ruby-keyword">while</span> <span class="ruby-identifier">file</span>.<span class="ruby-identifier">gets</span>
+    <span class="ruby-identifier">count</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">count</span>
+<span class="ruby-keyword">ensure</span>
+  <span class="ruby-identifier">file</span>.<span class="ruby-identifier">close</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">file</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-count_lines2" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">count_lines2</span><span
+            class="method-args">(file_name)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Now we write:</p>
+          
+          
+
+          
+          <div class="method-source-code" id="count_lines2-source">
+            <pre><span class="ruby-comment"># File about_sandwich_code.rb, line 66</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">count_lines2</span>(<span class="ruby-identifier">file_name</span>)
+  <span class="ruby-identifier">file_sandwich</span>(<span class="ruby-identifier">file_name</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">count</span> = <span class="ruby-value">0</span>
+    <span class="ruby-keyword">while</span> <span class="ruby-identifier">file</span>.<span class="ruby-identifier">gets</span>
+      <span class="ruby-identifier">count</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">count</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-count_lines3" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">count_lines3</span><span
+            class="method-args">(file_name)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <hr>
+          
+          
+
+          
+          <div class="method-source-code" id="count_lines3-source">
+            <pre><span class="ruby-comment"># File about_sandwich_code.rb, line 92</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">count_lines3</span>(<span class="ruby-identifier">file_name</span>)
+  <span class="ruby-identifier">open</span>(<span class="ruby-identifier">file_name</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">count</span> = <span class="ruby-value">0</span>
+    <span class="ruby-keyword">while</span> <span class="ruby-identifier">file</span>.<span class="ruby-identifier">gets</span>
+      <span class="ruby-identifier">count</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">count</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-file_sandwich" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">file_sandwich</span><span
+            class="method-args">(file_name) { |file| ... }</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <hr>
+
+<p>THINK ABOUT IT:</p>
+
+<p>The <a href="AboutSandwichCode.html#method-i-count_lines">#count_lines</a>
+and <a href="AboutSandwichCode.html#method-i-find_line">#find_line</a> are
+similar, and yet different. They both follow the pattern of “sandwich
+code”.</p>
+
+<p>Sandwich code is code that comes in three parts: (1) the top slice of
+bread, (2) the meat, and (3) the bottom slice of bread.  The bread part of
+the sandwich almost always goes together, but the meat part changes all the
+time.</p>
+
+<p>Because the changing part of the sandwich code is in the middle,
+abstracting the top and bottom bread slices to a library can be difficult
+in many languages.</p>
+
+<p>(Aside for C++ programmers: The idiom of capturing allocated pointers in a
+smart pointer constructor is an attempt to deal with the problem of
+sandwich code for resource allocation.)</p>
+
+<p>Consider the following code:</p>
+          
+          
+
+          
+          <div class="method-source-code" id="file_sandwich-source">
+            <pre><span class="ruby-comment"># File about_sandwich_code.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">file_sandwich</span>(<span class="ruby-identifier">file_name</span>)
+  <span class="ruby-identifier">file</span> = <span class="ruby-identifier">open</span>(<span class="ruby-identifier">file_name</span>)
+  <span class="ruby-keyword">yield</span>(<span class="ruby-identifier">file</span>)
+<span class="ruby-keyword">ensure</span>
+  <span class="ruby-identifier">file</span>.<span class="ruby-identifier">close</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">file</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-find_line" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">find_line</span><span
+            class="method-args">(file_name)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <hr>
+          
+          
+
+          
+          <div class="method-source-code" id="find_line-source">
+            <pre><span class="ruby-comment"># File about_sandwich_code.rb, line 22</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">find_line</span>(<span class="ruby-identifier">file_name</span>)
+  <span class="ruby-identifier">file</span> = <span class="ruby-identifier">open</span>(<span class="ruby-identifier">file_name</span>)
+  <span class="ruby-keyword">while</span> <span class="ruby-identifier">line</span> = <span class="ruby-identifier">file</span>.<span class="ruby-identifier">gets</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">line</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">match</span>(<span class="ruby-regexp">/e/</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">ensure</span>
+  <span class="ruby-identifier">file</span>.<span class="ruby-identifier">close</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">file</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-find_line2" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">find_line2</span><span
+            class="method-args">(file_name)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <hr>
+          
+          
+
+          
+          <div class="method-source-code" id="find_line2-source">
+            <pre><span class="ruby-comment"># File about_sandwich_code.rb, line 82</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">find_line2</span>(<span class="ruby-identifier">file_name</span>)
+  <span class="ruby-comment"># Rewrite find_line using the file_sandwich library function.</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_counting_lines" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_counting_lines</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_counting_lines-source">
+            <pre><span class="ruby-comment"># File about_sandwich_code.rb, line 16</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_counting_lines</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">__</span>, <span class="ruby-identifier">count_lines</span>(<span class="ruby-string">&quot;example_file.txt&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_counting_lines2" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_counting_lines2</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_counting_lines2-source">
+            <pre><span class="ruby-comment"># File about_sandwich_code.rb, line 76</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_counting_lines2</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">__</span>, <span class="ruby-identifier">count_lines2</span>(<span class="ruby-string">&quot;example_file.txt&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_finding_lines" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_finding_lines</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_finding_lines-source">
+            <pre><span class="ruby-comment"># File about_sandwich_code.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_finding_lines</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">__</span>, <span class="ruby-identifier">find_line</span>(<span class="ruby-string">&quot;example_file.txt&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_finding_lines2" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_finding_lines2</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_finding_lines2-source">
+            <pre><span class="ruby-comment"># File about_sandwich_code.rb, line 86</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_finding_lines2</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">__</span>, <span class="ruby-identifier">find_line2</span>(<span class="ruby-string">&quot;example_file.txt&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_open_handles_the_file_sandwich_when_given_a_block" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_open_handles_the_file_sandwich_when_given_a_block</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_open_handles_the_file_sandwich_when_given_a_block-source">
+            <pre><span class="ruby-comment"># File about_sandwich_code.rb, line 102</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_open_handles_the_file_sandwich_when_given_a_block</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">__</span>, <span class="ruby-identifier">count_lines3</span>(<span class="ruby-string">&quot;example_file.txt&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

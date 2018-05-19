@@ -1,0 +1,10 @@
+COMMON: &common
+  listen: '0.0.0.0'
+  srcFolder: './src'
+  configFolder: 'app/config'
+  dbPath: 'app/db'
+  dbFile: 'db.json'
+  downloaded: 'app/static/images/downloaded/'
+  email: 'zoz-reg@yandex.ru'
+  email_folder: 'Folders|ClubPhotorRu'
+  debug: True

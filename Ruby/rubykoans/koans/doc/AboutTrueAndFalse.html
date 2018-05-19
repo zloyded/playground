@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class AboutTrueAndFalse - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link"><a href="Neo/Koan.html">Neo::Koan</a>
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-i-test_everything_else_is_treated_as_true">#test_everything_else_is_treated_as_true</a>
+    
+    <li ><a href="#method-i-test_false_is_treated_as_false">#test_false_is_treated_as_false</a>
+    
+    <li ><a href="#method-i-test_nil_is_treated_as_false_too">#test_nil_is_treated_as_false_too</a>
+    
+    <li ><a href="#method-i-test_true_is_treated_as_true">#test_true_is_treated_as_true</a>
+    
+    <li ><a href="#method-i-truth_value">#truth_value</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-AboutTrueAndFalse">
+  <h1 id="class-AboutTrueAndFalse" class="class">
+    class AboutTrueAndFalse
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-test_everything_else_is_treated_as_true" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_everything_else_is_treated_as_true</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_everything_else_is_treated_as_true-source">
+            <pre><span class="ruby-comment"># File about_true_and_false.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_everything_else_is_treated_as_true</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">__</span>, <span class="ruby-identifier">truth_value</span>(<span class="ruby-value">1</span>)
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">__</span>, <span class="ruby-identifier">truth_value</span>(<span class="ruby-value">0</span>)
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">__</span>, <span class="ruby-identifier">truth_value</span>([])
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">__</span>, <span class="ruby-identifier">truth_value</span>({})
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">__</span>, <span class="ruby-identifier">truth_value</span>(<span class="ruby-string">&quot;Strings&quot;</span>)
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">__</span>, <span class="ruby-identifier">truth_value</span>(<span class="ruby-string">&quot;&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_false_is_treated_as_false" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_false_is_treated_as_false</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_false_is_treated_as_false-source">
+            <pre><span class="ruby-comment"># File about_true_and_false.rb, line 16</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_false_is_treated_as_false</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">__</span>, <span class="ruby-identifier">truth_value</span>(<span class="ruby-keyword">false</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_nil_is_treated_as_false_too" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_nil_is_treated_as_false_too</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_nil_is_treated_as_false_too-source">
+            <pre><span class="ruby-comment"># File about_true_and_false.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_nil_is_treated_as_false_too</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">__</span>, <span class="ruby-identifier">truth_value</span>(<span class="ruby-keyword">nil</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_true_is_treated_as_true" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_true_is_treated_as_true</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_true_is_treated_as_true-source">
+            <pre><span class="ruby-comment"># File about_true_and_false.rb, line 12</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_true_is_treated_as_true</span>
+  <span class="ruby-identifier">assert_equal</span> <span class="ruby-identifier">__</span>, <span class="ruby-identifier">truth_value</span>(<span class="ruby-keyword">true</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-truth_value" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">truth_value</span><span
+            class="method-args">(condition)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="truth_value-source">
+            <pre><span class="ruby-comment"># File about_true_and_false.rb, line 4</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">truth_value</span>(<span class="ruby-identifier">condition</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">condition</span>
+    <span class="ruby-value">:true_stuff</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-value">:false_stuff</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

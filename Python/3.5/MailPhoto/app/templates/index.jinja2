@@ -1,0 +1,46 @@
+% extends "layout.html" 
+% block content
+
+    <div class="pagger">
+      <ul>
+        {% if data['skip'] == 50 %}
+         <li> <a href="{{url_for('getIndex')}}"> < </a></li> 
+        {% elif data['skip'] > 0 %}
+          <li> <a href="{{ url_for('getIndex', skip=data['skip']-50 ) }}"> < </a></li>
+        {% endif %}
+        <li> <a href="{{ url_for('getIndex', skip=data['skip']+50 ) }}"> > </a></li>
+      </ul>
+    </div>
+    <div id="dialog" title="Предупреждение">
+      <p>Страница содержит контент категории 18+! </p>
+      <p>Если Вам нет еще 18 лет, пожалуйста покиньте страницу</p>
+      <p>Все фотографии принадлежат их авторам, авторство можно найти на сайте <a href='http://club.foto.ru/'>Клуб Фото Ру</a></p>
+    </div>
+    <div class="images">
+    
+    {% for file in data['files'] %}
+      {% set fpath = url_for('static', filename='images/downloaded/'+file['name'])  %}
+      
+      <a href="{{fpath}}" data-imagelightbox="{{fpath}}" data->
+        <div class="image" style="background-image: url('{{ fpath }}')" alt="{{file['url']}}" ></div>
+      </a>
+      
+    {% endfor %}
+    </div>
+    <script>
+
+    var $instance = $('a[data-imagelightbox]');
+    $('[data-imagelightbox]').imageLightbox({
+      animationSpeed: 250,
+      preloadNext:    true,
+      enableKeyboard: true,
+      quitOnEnd:      false,
+      quitOnImgClick: false,
+      quitOnDocClick: true,
+      onStart:        false,
+      onEnd:          false,
+      onLoadStart:    false,
+      onLoadEnd:      false          
+    });
+    </script>
+% endblock content

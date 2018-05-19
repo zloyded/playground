@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Neo::Sensei - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/darkfish.js"></script>
+
+<link href="../css/fonts.css" rel="stylesheet">
+<link href="../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link"><a href="../Object.html">Object</a>
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-a_zenlike_statement">#a_zenlike_statement</a>
+    
+    <li ><a href="#method-i-add_progress">#add_progress</a>
+    
+    <li ><a href="#method-i-artistic_end_screen">#artistic_end_screen</a>
+    
+    <li ><a href="#method-i-assert_failed-3F">#assert_failed?</a>
+    
+    <li ><a href="#method-i-boring_end_screen">#boring_end_screen</a>
+    
+    <li ><a href="#method-i-embolden_first_line_only">#embolden_first_line_only</a>
+    
+    <li ><a href="#method-i-encourage">#encourage</a>
+    
+    <li ><a href="#method-i-end_screen">#end_screen</a>
+    
+    <li ><a href="#method-i-failed-3F">#failed?</a>
+    
+    <li ><a href="#method-i-find_interesting_lines">#find_interesting_lines</a>
+    
+    <li ><a href="#method-i-guide_through_error">#guide_through_error</a>
+    
+    <li ><a href="#method-i-indent">#indent</a>
+    
+    <li ><a href="#method-i-instruct">#instruct</a>
+    
+    <li ><a href="#method-i-observe">#observe</a>
+    
+    <li ><a href="#method-i-progress">#progress</a>
+    
+    <li ><a href="#method-i-show_progress">#show_progress</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Neo::Sensei">
+  <h1 id="class-Neo::Sensei" class="class">
+    class Neo::Sensei
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+    <section class="constants-list">
+      <header>
+        <h3>Constants</h3>
+      </header>
+      <dl>
+      
+        <dt id="FailedAssertionError">FailedAssertionError
+        
+        <dd>
+        
+      
+        <dt id="PROGRESS_FILE_NAME">PROGRESS_FILE_NAME
+        
+        <dd>
+        
+      
+      </dl>
+    </section>
+    
+
+    
+    <section class="attribute-method-details" class="method-section">
+      <header>
+        <h3>Attributes</h3>
+      </header>
+
+      
+      <div id="attribute-i-failed_test" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">failed_test</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-failure" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">failure</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-pass_count" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">pass_count</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+    </section>
+    
+
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File neo.rb, line 204</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>
+  <span class="ruby-ivar">@pass_count</span> = <span class="ruby-value">0</span>
+  <span class="ruby-ivar">@failure</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@failed_test</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@observations</span> = []
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-a_zenlike_statement" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">a_zenlike_statement</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Hat&#39;s tip to Ara T. Howard for the zen statements from his metakoans
+Ruby Quiz (<a
+href="http://rubyquiz.com/quiz67.html">rubyquiz.com/quiz67.html</a>)</p>
+          
+          
+
+          
+          <div class="method-source-code" id="a_zenlike_statement-source">
+            <pre><span class="ruby-comment"># File neo.rb, line 388</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">a_zenlike_statement</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">failed?</span>
+    <span class="ruby-identifier">zen_statement</span> =  <span class="ruby-string">&quot;Mountains are again merely mountains&quot;</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">zen_statement</span> = <span class="ruby-keyword">case</span> (<span class="ruby-ivar">@pass_count</span> <span class="ruby-operator">%</span> <span class="ruby-value">10</span>)
+    <span class="ruby-keyword">when</span> <span class="ruby-value">0</span>
+      <span class="ruby-string">&quot;mountains are merely mountains&quot;</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-value">1</span>, <span class="ruby-value">2</span>
+      <span class="ruby-string">&quot;learn the rules so you know how to break them properly&quot;</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-value">3</span>, <span class="ruby-value">4</span>
+      <span class="ruby-string">&quot;remember that silence is sometimes the best answer&quot;</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-value">5</span>, <span class="ruby-value">6</span>
+      <span class="ruby-string">&quot;sleep is the best meditation&quot;</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-value">7</span>, <span class="ruby-value">8</span>
+      <span class="ruby-string">&quot;when you lose, don&#39;t lose the lesson&quot;</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-string">&quot;things are not what they appear to be: nor are they otherwise&quot;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-constant">Color</span>.<span class="ruby-identifier">green</span>(<span class="ruby-identifier">zen_statement</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-add_progress" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">add_progress</span><span
+            class="method-args">(prog)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="add_progress-source">
+            <pre><span class="ruby-comment"># File neo.rb, line 213</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">add_progress</span>(<span class="ruby-identifier">prog</span>)
+  <span class="ruby-ivar">@_contents</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">exists</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-constant">PROGRESS_FILE_NAME</span>)
+  <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-constant">PROGRESS_FILE_NAME</span>,<span class="ruby-string">&#39;a+&#39;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">f</span>.<span class="ruby-identifier">print</span> <span class="ruby-node">&quot;#{&#39;,&#39; if exists}#{prog}&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-artistic_end_screen" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">artistic_end_screen</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="artistic_end_screen-source">
+            <pre><span class="ruby-comment"># File neo.rb, line 298</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier">artistic_end_screen</span>
+      <span class="ruby-string">&quot;JRuby 1.9.x Koans&quot;</span>
+      <span class="ruby-identifier">ruby_version</span> = <span class="ruby-node">&quot;(in #{&#39;J&#39; if defined?(JRUBY_VERSION)}Ruby #{defined?(JRUBY_VERSION) ? JRUBY_VERSION : RUBY_VERSION})&quot;</span>
+      <span class="ruby-identifier">ruby_version</span> = <span class="ruby-identifier">ruby_version</span>.<span class="ruby-identifier">side_padding</span>(<span class="ruby-value">54</span>)
+        <span class="ruby-identifier">completed</span> = <span class="ruby-value">&lt;&lt;-ENDTEXT
+                                  ,,   ,  ,,
+                                :      ::::,    :::,
+                   ,        ,,: :::::::::::::,,  ::::   :  ,
+                 ,       ,,,   ,:::::::::::::::::::,  ,:  ,: ,,
+            :,        ::,  , , :, ,::::::::::::::::::, :::  ,::::
+           :   :    ::,                          ,:::::::: ::, ,::::
+          ,     ,:::::                                  :,:::::::,::::,
+      ,:     , ,:,,:                                       :::::::::::::
+     ::,:   ,,:::,                                           ,::::::::::::,
+    ,:::, :,,:::                                               ::::::::::::,
+   ,::: :::::::,       Mountains are again merely mountains     ,::::::::::::
+   :::,,,::::::                                                   ::::::::::::
+ ,:::::::::::,                                                    ::::::::::::,
+ :::::::::::,                                                     ,::::::::::::
+:::::::::::::                                                     ,::::::::::::
+::::::::::::                      Ruby Koans                       ::::::::::::
+::::::::::::#{                  ruby_version                     },::::::::::::
+:::::::::::,                                                      , :::::::::::
+,:::::::::::::,                brought to you by                 ,,::::::::::::
+::::::::::::::                                                    ,::::::::::::
+ ::::::::::::::,                                                 ,:::::::::::::
+ ::::::::::::,               Neo Software Artisans              , ::::::::::::
+  :,::::::::: ::::                                               :::::::::::::
+   ,:::::::::::  ,:                                          ,,:::::::::::::,
+     ::::::::::::                                           ,::::::::::::::,
+      :::::::::::::::::,                                  ::::::::::::::::
+       :::::::::::::::::::,                             ::::::::::::::::
+        ::::::::::::::::::::::,                     ,::::,:, , ::::,:::
+          :::::::::::::::::::::::,               ::,: ::,::, ,,: ::::
+              ,::::::::::::::::::::              ::,,  , ,,  ,::::
+                 ,::::::::::::::::              ::,, ,   ,:::,
+                      ,::::                         , ,,
+                                                  ,,,
+ENDTEXT</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-identifier">completed</span>
+    <span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-assert_failed-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">assert_failed?</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="assert_failed-3F-source">
+            <pre><span class="ruby-comment"># File neo.rb, line 253</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">assert_failed?</span>
+  <span class="ruby-identifier">failure</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">FailedAssertionError</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-boring_end_screen" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">boring_end_screen</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="boring_end_screen-source">
+            <pre><span class="ruby-comment"># File neo.rb, line 294</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">boring_end_screen</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Mountains are again merely mountains&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-embolden_first_line_only" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">embolden_first_line_only</span><span
+            class="method-args">(text)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="embolden_first_line_only-source">
+            <pre><span class="ruby-comment"># File neo.rb, line 363</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">embolden_first_line_only</span>(<span class="ruby-identifier">text</span>)
+  <span class="ruby-identifier">first_line</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-identifier">text</span>.<span class="ruby-identifier">collect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">first_line</span>
+      <span class="ruby-identifier">first_line</span> = <span class="ruby-keyword">false</span>
+      <span class="ruby-constant">Color</span>.<span class="ruby-identifier">red</span>(<span class="ruby-identifier">t</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-constant">Color</span>.<span class="ruby-identifier">cyan</span>(<span class="ruby-identifier">t</span>)
+    <span class="ruby-keyword">end</span>
+  }
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-encourage" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">encourage</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="encourage-source">
+            <pre><span class="ruby-comment"># File neo.rb, line 340</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">encourage</span>
+  <span class="ruby-identifier">puts</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;The Master says:&quot;</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-constant">Color</span>.<span class="ruby-identifier">cyan</span>(<span class="ruby-string">&quot;  You have not yet reached enlightenment.&quot;</span>)
+  <span class="ruby-keyword">if</span> ((<span class="ruby-identifier">recents</span> = <span class="ruby-identifier">progress</span>.<span class="ruby-identifier">last</span>(<span class="ruby-value">5</span>)) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">recents</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">5</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">recents</span>.<span class="ruby-identifier">uniq</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>)
+    <span class="ruby-identifier">puts</span> <span class="ruby-constant">Color</span>.<span class="ruby-identifier">cyan</span>(<span class="ruby-string">&quot;  I sense frustration. Do not be afraid to ask for help.&quot;</span>)
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">progress</span>.<span class="ruby-identifier">last</span>(<span class="ruby-value">2</span>).<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">2</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">progress</span>.<span class="ruby-identifier">last</span>(<span class="ruby-value">2</span>).<span class="ruby-identifier">uniq</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-constant">Color</span>.<span class="ruby-identifier">cyan</span>(<span class="ruby-string">&quot;  Do not lose hope.&quot;</span>)
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">progress</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-constant">Color</span>.<span class="ruby-identifier">cyan</span>(<span class="ruby-node">&quot;  You are progressing. Excellent. #{progress.last} completed.&quot;</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-end_screen" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">end_screen</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="end_screen-source">
+            <pre><span class="ruby-comment"># File neo.rb, line 286</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">end_screen</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Neo</span>.<span class="ruby-identifier">simple_output</span>
+    <span class="ruby-identifier">boring_end_screen</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">artistic_end_screen</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-failed-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">failed?</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="failed-3F-source">
+            <pre><span class="ruby-comment"># File neo.rb, line 249</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">failed?</span>
+  <span class="ruby-operator">!</span> <span class="ruby-ivar">@failure</span>.<span class="ruby-identifier">nil?</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-find_interesting_lines" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">find_interesting_lines</span><span
+            class="method-args">(backtrace)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="find_interesting_lines-source">
+            <pre><span class="ruby-comment"># File neo.rb, line 380</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">find_interesting_lines</span>(<span class="ruby-identifier">backtrace</span>)
+  <span class="ruby-identifier">backtrace</span>.<span class="ruby-identifier">reject</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">line</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/neo\.rb/</span>
+  }
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-guide_through_error" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">guide_through_error</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="guide_through_error-source">
+            <pre><span class="ruby-comment"># File neo.rb, line 353</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">guide_through_error</span>
+  <span class="ruby-identifier">puts</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;The answers you seek...&quot;</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-constant">Color</span>.<span class="ruby-identifier">red</span>(<span class="ruby-identifier">indent</span>(<span class="ruby-identifier">failure</span>.<span class="ruby-identifier">message</span>).<span class="ruby-identifier">join</span>)
+  <span class="ruby-identifier">puts</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Please meditate on the following code:&quot;</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-identifier">embolden_first_line_only</span>(<span class="ruby-identifier">indent</span>(<span class="ruby-identifier">find_interesting_lines</span>(<span class="ruby-identifier">failure</span>.<span class="ruby-identifier">backtrace</span>)))
+  <span class="ruby-identifier">puts</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-indent" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">indent</span><span
+            class="method-args">(text)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="indent-source">
+            <pre><span class="ruby-comment"># File neo.rb, line 375</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">indent</span>(<span class="ruby-identifier">text</span>)
+  <span class="ruby-identifier">text</span> = <span class="ruby-identifier">text</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp">/\n/</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">text</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>)
+  <span class="ruby-identifier">text</span>.<span class="ruby-identifier">collect</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span> <span class="ruby-node">&quot;  #{t}&quot;</span>}
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-instruct" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">instruct</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="instruct-source">
+            <pre><span class="ruby-comment"># File neo.rb, line 257</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">instruct</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">failed?</span>
+    <span class="ruby-ivar">@observations</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span> <span class="ruby-identifier">puts</span> <span class="ruby-identifier">c</span> }
+    <span class="ruby-identifier">encourage</span>
+    <span class="ruby-identifier">guide_through_error</span>
+    <span class="ruby-identifier">a_zenlike_statement</span>
+    <span class="ruby-identifier">show_progress</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">end_screen</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-observe" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">observe</span><span
+            class="method-args">(step)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="observe-source">
+            <pre><span class="ruby-comment"># File neo.rb, line 234</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">observe</span>(<span class="ruby-identifier">step</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">step</span>.<span class="ruby-identifier">passed?</span>
+    <span class="ruby-ivar">@pass_count</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@pass_count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">progress</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">to_i</span>
+      <span class="ruby-ivar">@observations</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">Color</span>.<span class="ruby-identifier">green</span>(<span class="ruby-node">&quot;#{step.koan_file}##{step.name} has expanded your awareness.&quot;</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@failed_test</span> = <span class="ruby-identifier">step</span>
+    <span class="ruby-ivar">@failure</span> = <span class="ruby-identifier">step</span>.<span class="ruby-identifier">failure</span>
+    <span class="ruby-identifier">add_progress</span>(<span class="ruby-ivar">@pass_count</span>)
+    <span class="ruby-ivar">@observations</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">Color</span>.<span class="ruby-identifier">red</span>(<span class="ruby-node">&quot;#{step.koan_file}##{step.name} has damaged your karma.&quot;</span>)
+    <span class="ruby-identifier">throw</span> <span class="ruby-value">:neo_exit</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-progress" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">progress</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="progress-source">
+            <pre><span class="ruby-comment"># File neo.rb, line 221</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">progress</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@_contents</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-constant">PROGRESS_FILE_NAME</span>)
+      <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-constant">PROGRESS_FILE_NAME</span>,<span class="ruby-string">&#39;r&#39;</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
+        <span class="ruby-ivar">@_contents</span> = <span class="ruby-identifier">f</span>.<span class="ruby-identifier">read</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/\s/</span>,<span class="ruby-string">&#39;&#39;</span>).<span class="ruby-identifier">split</span>(<span class="ruby-string">&#39;,&#39;</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-ivar">@_contents</span> = []
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@_contents</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-show_progress" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">show_progress</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="show_progress-source">
+            <pre><span class="ruby-comment"># File neo.rb, line 269</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">show_progress</span>
+  <span class="ruby-identifier">bar_width</span> = <span class="ruby-value">50</span>
+  <span class="ruby-identifier">total_tests</span> = <span class="ruby-constant">Neo</span><span class="ruby-operator">::</span><span class="ruby-constant">Koan</span>.<span class="ruby-identifier">total_tests</span>
+  <span class="ruby-identifier">scale</span> = <span class="ruby-identifier">bar_width</span>.<span class="ruby-identifier">to_f</span><span class="ruby-operator">/</span><span class="ruby-identifier">total_tests</span>
+  <span class="ruby-identifier">print</span> <span class="ruby-constant">Color</span>.<span class="ruby-identifier">green</span>(<span class="ruby-string">&quot;your path thus far [&quot;</span>)
+  <span class="ruby-identifier">happy_steps</span> = (<span class="ruby-identifier">pass_count</span><span class="ruby-operator">*</span><span class="ruby-identifier">scale</span>).<span class="ruby-identifier">to_i</span>
+  <span class="ruby-identifier">happy_steps</span> = <span class="ruby-value">1</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">happy_steps</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">pass_count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+  <span class="ruby-identifier">print</span> <span class="ruby-constant">Color</span>.<span class="ruby-identifier">green</span>(<span class="ruby-string">&#39;.&#39;</span><span class="ruby-operator">*</span><span class="ruby-identifier">happy_steps</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">failed?</span>
+    <span class="ruby-identifier">print</span> <span class="ruby-constant">Color</span>.<span class="ruby-identifier">red</span>(<span class="ruby-string">&#39;X&#39;</span>)
+    <span class="ruby-identifier">print</span> <span class="ruby-constant">Color</span>.<span class="ruby-identifier">cyan</span>(<span class="ruby-string">&#39;_&#39;</span><span class="ruby-operator">*</span>(<span class="ruby-identifier">bar_width</span><span class="ruby-operator">-</span><span class="ruby-value">1</span><span class="ruby-operator">-</span><span class="ruby-identifier">happy_steps</span>))
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">print</span> <span class="ruby-constant">Color</span>.<span class="ruby-identifier">green</span>(<span class="ruby-string">&#39;]&#39;</span>)
+  <span class="ruby-identifier">print</span> <span class="ruby-node">&quot; #{pass_count}/#{total_tests}&quot;</span>
+  <span class="ruby-identifier">puts</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
